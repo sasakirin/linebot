@@ -41,10 +41,10 @@ def callback():
     return 'OK'
 
 # 處理訊息
-@handler.add(MessageEvent, message=TextMessage)
-def handle_message(event):
-    message = TextSendMessage(text=(event.source.user_id)) #reply userid
-    line_bot_api.reply_message(event.reply_token, message)
+image_message = ImageSendMessage(
+original_content_url='http://p3.pstatp.com/large/127c00004578dd01b5d6',
+preview_image_url='http://p3.pstatp.com/large/127c00004578dd01b5d6'
+)
 
 import os
 if __name__ == "__main__":
