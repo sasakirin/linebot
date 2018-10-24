@@ -45,6 +45,7 @@ image_message = ImageSendMessage(
 original_content_url='http://p3.pstatp.com/large/127c00004578dd01b5d6',
 preview_image_url='http://p3.pstatp.com/large/127c00004578dd01b5d6'
 )
+line_bot_api.push_message(to, image_message)
 
 import os
 if __name__ == "__main__":
