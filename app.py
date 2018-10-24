@@ -40,11 +40,11 @@ def callback():
         abort(400)
     return 'OK'
 
-# 處理訊息
+#傳送圖片給自己
 image_message = ImageSendMessage(
-original_content_url='https://sdl-stickershop.line.naver.jp/stickershop/v1/sticker/18520099/android/sticker.png',
-preview_image_url='https://sdl-stickershop.line.naver.jp/stickershop/v1/sticker/18520099/android/sticker.png'
-)
+original_content_url='https://cdn.vox-cdn.com/thumbor/Dy9wnuaxjdrgn11DCQc5f-8BEi8=/535x0:4171x2904/1200x800/filters:focal(1963x1079:2709x1825)/cdn.vox-cdn.com/uploads/chorus_image/image/59944749/usa_today_10872796.0.jpg', 
+preview_image_url='https://cdn.vox-cdn.com/thumbor/Dy9wnuaxjdrgn11DCQc5f-8BEi8=/535x0:4171x2904/1200x800/filters:focal(1963x1079:2709x1825)/cdn.vox-cdn.com/uploads/chorus_image/image/59944749/usa_today_10872796.0.jpg'
+) 
 line_bot_api.push_message(to, image_message)
 
 import os
