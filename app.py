@@ -42,8 +42,8 @@ def callback():
 
 # 處理訊息
 image_message = ImageSendMessage(
-original_content_url='http://p3.pstatp.com/large/127c00004578dd01b5d6',
-preview_image_url='http://p3.pstatp.com/large/127c00004578dd01b5d6'
+original_content_url='https://sdl-stickershop.line.naver.jp/stickershop/v1/sticker/18520099/android/sticker.png',
+preview_image_url='https://sdl-stickershop.line.naver.jp/stickershop/v1/sticker/18520099/android/sticker.png'
 )
 line_bot_api.push_message(to, image_message)
 
