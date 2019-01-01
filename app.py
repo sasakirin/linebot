@@ -134,3 +134,26 @@ if __name__ == "__main__":
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port)
 
+from linebot import LineBotApi, WebhookHandler
+from linebot.exceptions import InvalidSignatureError,LineBotApiError
+from linebot.models import (
+    MessageEvent, TextMessage,
+    TextSendMessage,
+    ImageSendMessage,
+    TemplateSendMessage,
+    ButtonsTemplate, ConfirmTemplate, CarouselTemplate,
+    PostbackTemplateAction, MessageTemplateAction, URITemplateAction,
+    CarouselColumn
+)
+# Line token
+LINE_CHANNEL_ACCESS_TOKEN = '7ca265c2a750cd469ea514c2c12e1088'
+
+# Define linebot
+line_bot_api = LineBotApi(LINE_CHANNEL_ACCESS_TOKEN)
+
+# Define Receiver
+to = 'Uffb526bd9e91fcc7987c51347a1dbbb4'
+
+# send a text message to me
+Line_bot_api.push_message(to, TextSendMessage(text='想家了嗎?想要哪裡的時刻表?'))
+
