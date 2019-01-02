@@ -155,5 +155,5 @@ line_bot_api = LineBotApi(LINE_CHANNEL_ACCESS_TOKEN)
 to = 'Uffb526bd9e91fcc7987c51347a1dbbb4'
 
 # send a text message to me
-Line_bot_api.push_message(to, TextSendMessage(text='想家了嗎?想要哪裡的時刻表?'))
+line_bot_api.push_message(to, TextSendMessage(text='想家了嗎?想要哪裡的時刻表?'))
 
